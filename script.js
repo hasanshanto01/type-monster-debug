@@ -22,7 +22,6 @@ fetch("./texts.json")
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
   const newLetter = e.key;
-
   // Handle backspace press
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
@@ -58,7 +57,11 @@ const validate = (key) => {
   if (key === questionText[userText.length - 1]) {
     return true;
   }
-  return false;
+  else {
+    errorCount++;
+    // console.log(errorCount);
+    return false;
+  }
 };
 
 // FINISHED TYPING
@@ -67,7 +70,8 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
-  const timeTaken = (finishTime - startTime) / 1000;
+  // const timeTaken = (finishTime - startTime) / 1000;
+  const timeTaken = parseInt((finishTime - startTime) / 1000);
 
   // show result modal
   resultModal.innerHTML = "";
@@ -100,7 +104,6 @@ const closeModal = () => {
 };
 
 const start = () => {
-  // console.log('start clicked')
   // If already started, do not start again
   if (startTime) return;
 
@@ -115,6 +118,8 @@ const start = () => {
       // -------------- START TYPING -----------------
       // display.classList.remove("inactive");
       document.addEventListener("keydown", typeController);
+      // console.log(countdownOverlay.innerText);
+      countdownOverlay.innerText = '';
       countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
 
@@ -134,7 +139,8 @@ displayHistory();
 // Show typing time spent
 setInterval(() => {
   const currentTime = new Date().getTime();
-  const timeSpent = (currentTime - startTime) / 1000;
+  // const timeSpent = (currentTime - startTime) / 1000;
+  const timeSpent = parseInt((currentTime - startTime) / 1000);
 
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
