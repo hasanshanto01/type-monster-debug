@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- styles  -->
+    <style>
+        body {
+            background-color: lightslategrey;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="text-center my-3 fw-bold">
+            <h1>Welcome to Blog!!!</h1>
+        </div>
+    </header>
+    <main class="my-5">
+        <section>
+            <h2 class="text-center">Commonly Asked Question Answer</h2>
+            <!-- FAQ  -->
+            <div class="accordion w-75 mx-auto mt-5" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fs-5 fw-semibold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Difference between Session Storage and Local Storage?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            The difference is that <strong>
+                                with sessionStorage</strong> , the data is persisted only until the window or
+                            tab is closed. <strong>With localStorage </strong> , the data is persisted until the user
+                            manually clears
+                            the
+                            browser cache or until your web app clears the data.The storage capacity of <strong>session
+                                storage is 5MB</strong>. The storage capacity of <strong>local storage is
+                                5MB/10MB</strong>.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed fs-5 fw-semibold" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            Difference between Global scope vs Block scope in javascript?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            The Javascript <strong>global scope is the context where everything in a Javascript program
+                                executes
+                                by default.</strong> This scope includes all variables, objects, and references that are
+                            not
+                            contained within a customized scope defined by a programmer. Global scope is the entire
+                            Javascript execution environment. The Javascript <strong>block scope restricts the variable
+                                that is
+                                declared inside
+                                a specific block, from access by the outside of the block.</strong> The let & const
+                            keyword
+                            facilitates the variables to be block scoped.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed fs-5 fw-semibold" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree">
+                            How does Javascript Event Loop work?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            The Event Loop has one simple job — <strong>to monitor the Call Stack and the Callback
+                                Queue.</strong> If the
+                            Call Stack is empty, the Event Loop will take the first event from the queue and will push
+                            it to the Call Stack, which effectively runs it. Such an iteration is called a tick in the
+                            Event Loop.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed fs-5 fw-semibold" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                            aria-controls="collapseFour">
+                            How can we get "undefined" in javascript?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>8 ways to get undefined:</strong>
+                            1. Variable that is not initialized.
+                            2. Function with no return.
+                            3. Parameter that is not passed.
+                            4. If what will return is not defined.
+                            5. Property that doesn't exist on an object.
+                            6. Accessing array element outside of the index range.
+                            7. For deleted element of an array.
+                            8. Set a value directly to undefined.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- bootstrap js link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
