@@ -59,7 +59,6 @@ const validate = (key) => {
   }
   else {
     errorCount++;
-    // console.log(errorCount);
     return false;
   }
 };
@@ -116,11 +115,9 @@ const start = () => {
     // finished timer
     if (count == 0) {
       // -------------- START TYPING -----------------
-      // display.classList.remove("inactive");
       document.addEventListener("keydown", typeController);
-      // console.log(countdownOverlay.innerText);
-      countdownOverlay.innerText = '';
       countdownOverlay.style.display = "none";
+      countdownOverlay.innerText = '';
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
